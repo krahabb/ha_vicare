@@ -1,6 +1,5 @@
 """Viessmann ViCare water_heater device."""
 from contextlib import suppress
-import logging
 from typing import Any
 
 from PyViCare.PyViCareUtils import PyViCareNotSupportedFeatureError
@@ -26,8 +25,9 @@ from .const import (
     VICARE_DEVICE_CONFIG,
     VICARE_NAME,
 )
+from . import helpers
 
-_LOGGER = logging.getLogger(__name__)
+_LOGGER = helpers.getLogger(__name__)
 
 VICARE_MODE_DHW = "dhw"
 VICARE_MODE_HEATING = "heating"

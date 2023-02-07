@@ -32,12 +32,13 @@ from .const import (
     VICARE_DEVICE_CONFIG,
     HeatingType,
 )
+from . import helpers
 
 if typing.TYPE_CHECKING:
     from PyViCare.PyViCareDeviceConfig import PyViCareDeviceConfig
 
 
-_LOGGER = logging.getLogger(__name__)
+_LOGGER = helpers.getLogger(__name__)
 
 
 class ViCareError(Exception):

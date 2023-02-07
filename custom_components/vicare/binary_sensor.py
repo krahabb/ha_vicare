@@ -3,7 +3,6 @@ from __future__ import annotations
 
 from contextlib import suppress
 from dataclasses import dataclass
-import logging
 
 from PyViCare.PyViCareUtils import PyViCareNotSupportedFeatureError
 from homeassistant.components.binary_sensor import (
@@ -17,8 +16,9 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from . import ViCareEntity, ViCareRequiredKeysMixin, managed_exceptions
 from .const import DOMAIN, VICARE_API, VICARE_DEVICE_CONFIG, VICARE_NAME
+from . import helpers
 
-_LOGGER = logging.getLogger(__name__)
+_LOGGER = helpers.getLogger(__name__)
 
 
 @dataclass
